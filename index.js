@@ -1,7 +1,10 @@
 const express = require("express")
 const app = express()
+const cors = require("cors")
+
 
 app.use(express.json())
+app.use(cors())
 
 const { initializeDB } = require("./db/db.connect")
 const Hotel = require("./models/hotel.models")
